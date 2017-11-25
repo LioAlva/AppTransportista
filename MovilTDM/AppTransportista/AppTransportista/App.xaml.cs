@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppTransportista.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,11 +10,13 @@ namespace AppTransportista
 {
     public partial class App : Application
     {
+        public static NavigationPage Navigator { get; internal set; }
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new AppTransportista.MainPage();
+            MainPage = new MasterPage();
         }
 
         protected override void OnStart()
