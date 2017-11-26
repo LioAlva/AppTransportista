@@ -31,11 +31,8 @@
         Text="Fecha entrega"/>
             <DatePicker
         BackgroundColor="{StaticResource MenuFontColor}" />
-            <Button 
-        HeightRequest="50"
-        BorderRadius="25"
-        BackgroundColor="{StaticResource MainColor}" 
-        TextColor="{StaticResource MenuFontColor}" 
+            <Button
+        Style="{StaticResource GeneralButton}" 
         Text="Guardar" />
         </StackLayout>
     </ScrollView>

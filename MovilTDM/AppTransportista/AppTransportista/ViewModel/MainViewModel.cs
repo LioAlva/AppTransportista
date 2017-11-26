@@ -90,6 +90,13 @@ namespace AppTransportista.ViewModel
         #region Commands
         public ICommand GotoCommand { get { return new RelayCommand<string>(Goto); } }
 
+        public ICommand StartCommand { get { return new RelayCommand(Start); } }
+
+        private void Start()
+        {//aca no navega aca cambia de pagina
+            navigationService.SetMainPage();
+        }
+
         private void Goto(string pageName)
         {
             navigationService.Navigate(pageName);

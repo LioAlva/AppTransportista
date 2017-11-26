@@ -20,6 +20,20 @@
             <!-- Locator -->
             <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
         
+            <!--Fonts vid 89-->
+            <OnPlatform x:Key="GeneralButtonFont" x:TypeArguments="Font" iOS="12" Android="14" WinPhone="16"/>
+
+            <!--Style vid 89-->
+            <!-- Styles -->
+            <Style x:Key="GeneralButton" TargetType="Button">
+                <Setter Property="Font" Value="{StaticResource GeneralButtonFont}"/>
+                <Setter Property="BorderRadius" Value="25"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="BackgroundColor" Value="{StaticResource AccentColor1}"/>
+                <Setter Property="TextColor" Value="{StaticResource MenuFontColor}"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+            </Style>
         </ResourceDictionary>
 
     </Application.Resources>

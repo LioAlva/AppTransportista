@@ -9,29 +9,35 @@ namespace AppTransportista.Services
 {
     public class NavigationService
     {
-        public void Navigate( string PageName)
+        public async void Navigate( string PageName)
         {
             App.Master.IsPresented = false;//esto desaparece y aparece la nueva pagina
             //ocultamos nenu lateral
             switch (PageName)
             {
                 case "AlarmsPage":
-                    App.Navigator.PushAsync(new AlarmsPage());
+                    await App.Navigator.PushAsync(new AlarmsPage());
                     break;
                 case "ClientsPage":
-                    App.Navigator.PushAsync(new ClientsPage());
+                    await App.Navigator.PushAsync(new ClientsPage());
                     break;
                 case "SettingsPage":
-                    App.Navigator.PushAsync(new SettingsPage());
+                    await App.Navigator.PushAsync(new SettingsPage());
                     break;
                 case "MainPage":
-                    App.Navigator.PopToRootAsync();
+                    await App.Navigator.PopToRootAsync();
                     break;
                 case "NewOrderPage":
-                    App.Navigator.PushAsync(new NewOrderPage()); break;
+                    await App.Navigator.PushAsync(new NewOrderPage()); break;
                 default:
                     break;
             }
+        }
+
+        internal void SetMainPage()
+        {
+            //para que no quede el boton de para atras
+            App.Current.MainPage = new MasterPage();
         }
     }
 }
