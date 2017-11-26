@@ -6,26 +6,7 @@
              BindingContext="{Binding Main,Source={StaticResource Locator}}"
              Title="Menú">
 
-    <StackLayout>
-
-        <StackLayout Orientation="Horizontal">
-            <Label Text="E-Commerce"
-               TextColor="{StaticResource MenuFontColor}"
-               FontSize="24"
-               FontAttributes="Bold"
-               HorizontalOptions="StartAndExpand"
-               VerticalOptions="Center"
-               ></Label>
-            <Image Source="ic_launcher.png"
-               WidthRequest="80"
-               HeightRequest="80"
-               HorizontalOptions="End"
-               VerticalOptions="Center"></Image>
-7
-        </StackLayout>
-        <BoxView HeightRequest="3">
-            
-        </BoxView>
+  
         <ListView
         ItemsSource="{Binding Menu}"
         HasUnevenRows="True">
@@ -60,8 +41,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-    </StackLayout>
-    
+ 
   
 
 

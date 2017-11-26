@@ -15,5 +15,8 @@ namespace AppTransportista.ViewModel
         public DateTime DeliveryDate { get; set; }
         public string DeliveryInformation { get; set; }
         public string Client { get; set; }
+        public string Phone { get; set; }
+        public bool IsDelivery  { get; set; }
+
     }
 }

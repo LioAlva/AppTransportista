@@ -21,6 +21,8 @@ namespace AppTransportista.ViewModel
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
         public ObservableCollection<OrderViewModel> Orders { get; set; }
+
+        public LoginViewModel NewLogin { get; set; }
         #endregion
         #region Constructors
         public MainViewModel()
@@ -28,6 +30,8 @@ namespace AppTransportista.ViewModel
             Menu = new ObservableCollection<MenuItemViewModel>();
             Orders = new ObservableCollection<OrderViewModel>();
             navigationService = new NavigationService();
+
+            NewLogin =new LoginViewModel();
             LoadMenu();
             LoadFakeData();
         }

@@ -17,7 +17,7 @@ namespace AppTransportista
         {
             InitializeComponent();
 
-            MainPage = new WelcomePage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()
