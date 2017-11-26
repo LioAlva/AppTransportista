@@ -47,7 +47,9 @@
 
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="ic_action_add.png"/>
+        <ToolbarItem Icon="ic_action_add.png"
+                     Command="{Binding GotoCommand}"
+                     CommandParameter="NewOrderPage"/>
     </ContentPage.ToolbarItems>
 
 </ContentPage>
