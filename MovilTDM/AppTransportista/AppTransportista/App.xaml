@@ -30,10 +30,44 @@
                 <Setter Property="BorderRadius" Value="25"/>
                 <Setter Property="HeightRequest" Value="50"/>
                 <Setter Property="BackgroundColor" Value="{StaticResource AccentColor1}"/>
-                <Setter Property="TextColor" Value="{StaticResource MenuFontColor}"/>
+                <Setter Property="TextColor" Value="{StaticResource FontColor}"/>
                 <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
                 <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
+            
+            <!--DataTemplate-->
+            <DataTemplate x:Key="OrderItemTemplate">
+                <ViewCell>
+                    <Grid Padding="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image
+                              Source="icon.png"
+                              VerticalOptions="Start"
+                              WidthRequest="50"
+                              HeightRequest="50"
+                             />
+                        <StackLayout Grid.Column="1">
+                            <Label
+                            VerticalOptions="Center"
+                            TextColor="{StaticResource FontColor}"
+                            Text="{Binding Title}"/>
+                            <Label
+                            VerticalOptions="Center"
+                            TextColor="{StaticResource FontColor}"
+                            Text="{Binding Description}"/>
+                            <Label
+                            VerticalOptions="Center"
+                            TextColor="{StaticResource MainColor}"
+                            Text="{Binding DeliveryDate,StringFormat='{0:yyyy/MM/dd}'}"/>
+
+                        </StackLayout>
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
         </ResourceDictionary>
 
     </Application.Resources>
