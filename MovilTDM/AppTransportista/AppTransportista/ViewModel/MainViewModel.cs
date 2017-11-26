@@ -1,4 +1,5 @@
 ﻿using AppTransportista.Pages;
+using AppTransportista.Services;
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,10 @@ namespace AppTransportista.ViewModel
 {
     public class MainViewModel//la reina detodas las clases
     {//oservable necesito verlo desde la vista del menu
+        #region Attributes
+        public NavigationService navigationService;
+        #endregion
+
         #region Properties
         public ObservableCollection<MenuItemViewModel> Menu { get; set; }
 
@@ -22,6 +27,7 @@ namespace AppTransportista.ViewModel
         {
             Menu = new ObservableCollection<MenuItemViewModel>();
             Orders = new ObservableCollection<OrderViewModel>();
+            navigationService = new NavigationService();
             LoadMenu();
             LoadFakeData();
         }
@@ -86,12 +92,7 @@ namespace AppTransportista.ViewModel
 
         private void Goto(string pageName)
         {
-            switch (pageName)
-            {
-                case "NewOrderPage":
-                    App.Navigator.PushAsync(new NewOrderPage());break;
-                default:;break;
-            }
+            navigationService.Navigate(pageName);
         }
         #endregion
     }
