@@ -9,13 +9,14 @@
     </MasterDetailPage.Master>
 
     <MasterDetailPage.Detail>
-        <NavigationPage x:Name="Navigator">
+        <NavigationPage x:Name="Navigator" BarBackgroundColor="{StaticResource MainColor}">
             <x:Arguments>
                 <pages:MainPage>
                 </pages:MainPage>
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>
+    
 </MasterDetailPage>
 
 
